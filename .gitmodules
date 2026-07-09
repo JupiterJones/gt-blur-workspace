@@ -1,0 +1,12 @@
+[submodule "Bloc"]
+	path = Bloc
+	url = git@github.com:JupiterJones/Bloc.git
+[submodule "sparta"]
+	path = sparta
+	url = git@github.com:JupiterJones/sparta.git
+[submodule "compositor-rs"]
+	path = compositor-rs
+	url = git@github.com:JupiterJones/compositor-rs.git
+[submodule "libskia"]
+	path = libskia
+	url = git@github.com:JupiterJones/libskia.git
