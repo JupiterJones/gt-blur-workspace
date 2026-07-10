@@ -12,7 +12,7 @@ fi
 
 : "${GT_APP:?Set GT_APP in .env, e.g. /opt/TestNewBVC/MyProject/devkit/MyProject.app}"
 
-BUILT_LIB="$ROOT/libskia/libskia/target/release/libSkia.dylib"
+BUILT_LIB="$ROOT/libskia/target/release/libSkia.dylib"
 PLUGIN="$GT_APP/Contents/MacOS/Plugins/libSkia.dylib"
 
 "$ROOT/scripts/build-libskia.sh"

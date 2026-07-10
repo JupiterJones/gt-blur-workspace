@@ -1,15 +1,9 @@
-model_instructions_file = "../HANDOVER.md"
-
 [actions.setup]
 description = "Initialize and update all git submodules"
 command = "scripts/setup.sh"
 
-[actions.run_filter_probe]
-description = "Run compositor-rs filter-below probe"
-command = "cd compositor-rs && cargo run -p compositor-skia --example filter_below_probe"
-
 [actions.build_libskia]
-description = "Build and ad-hoc sign libSkia.dylib against local compositor-rs"
+description = "Build and ad-hoc sign libSkia.dylib using its locked Cargo dependencies"
 command = "scripts/build-libskia.sh"
 
 [actions.deploy_libskia]

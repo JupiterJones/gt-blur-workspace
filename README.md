@@ -19,14 +19,25 @@ scripts/setup.sh
 
 ## Codex
 
-Open Codex at this workspace root so it can see all four submodules and the shared `.codex` configuration.
+Open Codex at this workspace root so it can see all four submodules and the shared actions.
 
 Useful actions:
 
 - `setup`
-- `run_filter_probe`
 - `build_libskia`
 - `deploy_libskia`
+
+`build_libskia` uses the compositor revision recorded in `libskia/Cargo.lock`.
+During compositor development, use temporary sibling path dependencies in
+`libskia/libskia/Cargo.toml`; restore the git dependencies before contributing.
+
+## Coordinated contribution
+
+The `blur_below` branches in `compositor-rs`, `libskia`, `sparta`, and `Bloc`
+form one coordinated change. The native compositor support must be merged first.
+After that, update `libskia/Cargo.lock` to the merged compositor revision before
+submitting the libskia dependency update. The Sparta and Bloc changes depend on
+the resulting native symbols being present in `libSkia.dylib`.
 
 ## Submodule contribution workflow
 
